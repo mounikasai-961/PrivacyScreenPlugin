@@ -17,6 +17,8 @@ static UIImageView *imageView;
 
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppWillResignActive:)
                                                name:UIApplicationWillResignActiveNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppDidBecomeActive:)
+                                               name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 }
 
 - (void)onAppDidBecomeActive:(UIApplication *)application
